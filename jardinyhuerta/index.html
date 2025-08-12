@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="es">
+    <!-- index -->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Empresa Industrial - Soluciones Tecnológicas</title>
+    <title>Jardin y Huerta Labranza</title>
     <style>
         /* Estilos generales */
         body {
@@ -15,7 +16,7 @@
         
         /* Header y navegación */G
         header {
-            background-color: #fff;
+            background-color: #ffffff;
             box-shadow: 0 2px 5px rgba(0,0,0,0.1);
             position: fixed;
             width: 100%;
@@ -27,11 +28,12 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 15px 5%;
+            padding: 8px 5%;
         }
         
         .logo img {
-            height: 50px;
+            height: 100px;
+            transition: height 0.3s ease;
         }
         
         .menu {
@@ -66,6 +68,12 @@
             margin-top: 80px;
         }
         
+        .hero-background {
+            background-image: url('https://cdn.pixabay.com/photo/2018/08/11/12/28/flower-meadow-3598561_1280.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
         .hero-content {
             background-color: rgba(0,0,0,0.7);
             color: white;
@@ -113,7 +121,7 @@
         
         .footer-grid {
             display: grid;
-            grid-template-columns: repeat(4, 1fr);
+            grid-template-columns: repeat(3, 1fr);
             gap: 30px;
         }
         
@@ -147,62 +155,111 @@
             border-top: 1px solid #444;
             color: #aaa;
         }
+        header.shrink {
+            padding: 4px 0;
+            transition: padding 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .navbar.shrink-logo .logo img {
+            height: 60px !important; /* altura reducida al hacer scroll */
+            transition: height 0.3s ease;
+        }
+        .ubicacion {
+            padding: 60px 5%;
+            text-align: center;
+            background-color: #f9f9f9;
+        }
+        .ubicacion h2 {
+            font-size: 32px;
+            margin-bottom: 30px;
+            color: #0066cc;
+        }
+        .map-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+        }
     </style>
 </head>
-<body>
+
+<body>  
     <!-- Header con navegación -->
     <header>
         <div class="navbar">
             <div class="logo">
-                <img src="https://via.placeholder.com/150x50" alt="Logo Empresa">
+                <img src="Arregloshuerta.png" alt="Logo Empresa">
             </div>
             <ul class="menu">
-                <li><a href="#">Inicio</a></li>
-                <li><a href="#">Empresa</a></li>
-                <li><a href="#">Productos</a></li>
-                <li><a href="#">Servicios</a></li>
-                <li><a href="#">Clientes</a></li>
-                <li><a href="#">Contacto</a></li>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="empresa.html">Empresa</a></li>
+                <li><a href="productos.html">Productos</a></li>
+                <li><a href="servicios.html">Servicios</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
             </ul>
         </div>
     </header>
     
-    <!-- Banner principal -->
-    <section class="hero">
-        <div class="hero-content">
-            <h1>Soluciones industriales avanzadas</h1>
-            <p>Líderes en tecnología industrial con más de 30 años de experiencia en el mercado.</p>
-            <button style="background-color: #0066cc; color: white; border: none; padding: 10px 20px; margin-top: 20px; cursor: pointer;">Ver más</button>
-        </div>
-    </section>
     
-    <!-- Sección de servicios -->
+    <!-- Fondo detrás del banner principal -->
+    <div class="hero-background">
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Jardin y Huerta Labranza</h1>
+                <p>Microempresa familiar ubicada en Labranza para acercar la agricultura a tu casa.</p>
+                <button style="background-color: #0066cc; color: white; border: none; padding: 10px 20px; margin-top: 20px; cursor: pointer;">Ver más</button>
+            </div>
+        </section>
+    </div>
+
+    
+<!-- Sección de servicios -->
     <section class="services">
-        <h2>Nuestros Servicios</h2>
-        <div class="service-grid">
-            <div class="service-card">
-                <h3>Automatización Industrial</h3>
-                <p>Soluciones completas para la automatización de procesos industriales.</p>
-            </div>
-            <div class="service-card">
-                <h3>Control de Procesos</h3>
-                <p>Sistemas avanzados para el monitoreo y control de procesos productivos.</p>
-            </div>
-            <div class="service-card">
-                <h3>Ingeniería Eléctrica</h3>
-                <p>Diseño e implementación de sistemas eléctricos industriales.</p>
-            </div>
+    <h2>Nuestros Servicios</h2>
+    <div class="service-grid">
+        <div class="service-card">
+            <h3>Semillas</h3>
+            <p>Ofrecemos una amplia variedad de semillas certificadas y de alta calidad para cultivos agrícolas, adaptadas a diferentes tipos de suelo y climas.</p>
         </div>
+        <div class="service-card">
+            <h3>Fertilizantes y abonos</h3>
+            <p>Proveemos fertilizantes y abonos orgánicos e inorgánicos que mejoran la nutrición del suelo y optimizan el rendimiento de tus cultivos.</p>
+        </div>
+        <div class="service-card">
+            <h3>Plantas</h3>
+            <p>Contamos con plantas ornamentales, frutales y forestales, seleccionadas cuidadosamente para garantizar su desarrollo y adaptabilidad.</p>
+        </div>
+        <div class="service-card">
+            <h3>Herramientas para agricultura</h3>
+            <p>Disponemos de herramientas manuales y motorizadas que facilitan las labores agrícolas y mejoran la eficiencia en el campo.</p>
+        </div>
+        <div class="service-card">
+            <h3>Insumos agrícolas</h3>
+            <p>Brindamos una gama completa de insumos como pesticidas, herbicidas y productos fitosanitarios esenciales para una agricultura productiva y segura.</p>
+        </div>
+    </div>
     </section>
-    
-    <!-- Footer -->
-    <footer>
-        <div class="footer-grid">
+<!-- Sección de ubicación -->
+<section class="ubicacion">
+    <h2>¿Dónde estamos?</h2>
+    <div class="map-container">
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d505.32204049529275!2d-72.7562936461229!3d-38.767237903963974!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x96152bb11b710155%3A0x2e5bf6f02514930e!2sJard%C3%ADn%20%26%20Huerta!5e0!3m2!1ses-419!2scl!4v1754955487542!5m2!1ses-419!2scl"
+            width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer>
+    <div class="footer-grid">
             <div class="footer-column">
                 <h3>Empresa</h3>
                 <ul>
                     <li><a href="#">Quiénes somos</a></li>
-                    <li><a href="#">Historia</a></li>
                     <li><a href="#">Equipo</a></li>
                 </ul>
             </div>
@@ -215,25 +272,34 @@
                 </ul>
             </div>
             <div class="footer-column">
-                <h3>Servicios</h3>
-                <ul>
-                    <li><a href="#">Ingeniería</a></li>
-                    <li><a href="#">Mantenimiento</a></li>
-                    <li><a href="#">Capacitación</a></li>
-                </ul>
-            </div>
-            <div class="footer-column">
                 <h3>Contacto</h3>
                 <ul>
-                    <li>Dirección: Calle Principal 1234</li>
-                    <li>Teléfono: +56 2 2345 6789</li>
-                    <li>Email: contacto@empresa.cl</li>
+                    <li>Dirección: 1 Norte #10, Local 5, Labranza, Temuco</li>
+                    <li>Teléfono: +56 9 72673799</li>
+                    <li>Email: jardinyhuertolabranza@gmail.com</li>
+                    <li>Instagram: @jardinyhuerta_labranza</li>
+                    <li>Facebook: Jardín y Huerta Labranza</li>
                 </ul>
             </div>
         </div>
         <div class="copyright">
-            <p>&copy; 2023 Empresa Industrial. Todos los derechos reservados.</p>
+            <p>&copy; 2025 Jardin y Huerta Labranza. Todos los derechos reservados.</p>
         </div>
     </footer>
+    <script>
+    window.addEventListener("scroll", function() {
+        const header = document.querySelector("header");
+        const navbar = document.querySelector(".navbar");
+
+        if (window.scrollY > 50) {
+            header.classList.add("shrink");
+            navbar.classList.add("shrink-logo");
+        } else {
+            header.classList.remove("shrink");
+            navbar.classList.remove("shrink-logo");
+        }
+    });
+</script>
+
 </body>
 </html>
